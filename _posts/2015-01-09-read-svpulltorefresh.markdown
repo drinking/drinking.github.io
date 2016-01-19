@@ -10,16 +10,16 @@ categories: iOS
 
 首先在类别中声明一个`SVPullToRefreshView`的property。
 
-```objc
+{% highlight objective-c %}
 @interface UIScrollView (SVPullToRefresh)
 ...
 @property (nonatomic, strong, readonly) SVPullToRefreshView *pullToRefreshView;
 ...
 @end
-```
+{% endhighlight %}
 然而Category并不支持为类添加属性和成员变量，所以需要通过关联对象的方法来动态添加。我们发现在.m文件中引入了`#import <objc/runtime.h>`头文件，并用@dynamic来声明pullToRefreshView，@dynamic的作用是告诉编译器手动实现setter和getter方法。关于objective-C的其它保留字可以参考[唐巧的博文](http://blog.devtang.com/blog/2013/04/29/the-missing-objc-keywords/)。
 
-```objc
+{% highlight objective-c %}
 
 #import <objc/runtime.h>
 
@@ -44,7 +44,7 @@ return objc_getAssociatedObject(self, &UIScrollViewPullToRefreshView);
 
 ...
 @end
-```
+{% endhighlight %}
 核心部分的setter方法中，使用了`objc_setAssociatedObject `，其作用就是为一个对象动态添加没有声明的变量。以下是[SO](http://stackoverflow.com/questions/5909412/what-is-objc-setassociatedobject-and-in-what-cases-should-it-be-used)上的详细解释。
 
 >objc_setAssociatedObject adds a key value store to each Objective-C object. It lets you store additional state for the object, not reflected in its instance variables.

@@ -13,7 +13,7 @@ categories:
 
 国外的一个项目，第一段是09年的提交。句首字母大小写随意，内容有的冗长不易阅读，有的过于简短难以理解。没有美感。
 
-```
+{% highlight text %}
 $ git log --oneline -5 --author cbeams --before "Fri Mar 26 2009"
 
 e5f4b49 Re-adding ConfigurationPostProcessorTests after its brief removal in r814. @Ignore-ing the testCglibClassesAreLoadedJustInTimeForEnhancement() method as it turns out this was one of the culprits in the recent build breakage. The classloader hacking causes subtle downstream effects, breaking unrelated tests. The test method is still useful, but should only be run on a manual basis to ensure CGLIB is not prematurely classloaded, and should not be run as part of the automated build.
@@ -22,13 +22,13 @@ e5f4b49 Re-adding ConfigurationPostProcessorTests after its brief removal in r81
 22b25e0 Consolidated Util and MutableAnnotationUtils classes into existing AsmUtils
 7f96f57 polishing
 
-```
+{% endhighlight %}
 
 
 
 到了14年提交就意简言概工整多了。看得出说明和代码一样一个持续完善的过程。
 
-```
+{% highlight text %}
 $ git log --oneline -5 --author pwebb --before "Sat Aug 30 2014"
 
 5ba3db6 Fix failing CompositePropertySourceTests
@@ -37,7 +37,7 @@ e142fd1 Add tests for ImportSelector meta-data
 887815f Update docbook dependency and generate epub
 ac8326d Polish mockito usage
 
-```
+{% endhighlight %}
 
 通过对比容易归纳出规范的特性。
 

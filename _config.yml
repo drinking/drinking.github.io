@@ -7,17 +7,42 @@
 
 # Site settings
 title: Oladipo Planet
-subtitle: 无知和弱小不是生存的障碍,傲慢才是
+author: "Drinking"
+subheading: "无知和弱小不是生存的障碍,傲慢才是"
 email: pan49@126.com
 description: iOS Developer working in ShangHai,China
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://drinking.github.io" # the base hostname & protocol for your site
-twitter_username: Crazy_Drinking
-github_username:  drinking
+# twitter_username: Crazy_Drinking
+# github_username:  drinking
 
-# Build settings
+# # Build settings
 markdown: kramdown
-kramdown:
-  input: GFM
 highlighter: pygments
-github: https://github.com/drinking
+# github: https://github.com/drinking
+
+comments:
+    disqus: "olaplanet"
+#    isso: "comments.mysite.org"
+
+style:
+#    body: "whitesmoke"
+    padding: 33%
+    anchor: "#46f"
+    serif-heading: true
+    nav: "#181818"
+#    headline: "#06f"
+    description: "white"
+    article:
+        odd: "#ffffff"
+        even: "#222222"
+
+links:
+  - github: "https://github.com/drinking"
+  - instagram: "https://www.instagram.com/duyado/"
+  - stack-overflow: "http://stackoverflow.com/users/1846773/drinking"
+
+paginate: 10
+excerpt_separator: "\n\n\n" # excerpt ends after two blank lines
+defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: true}}]
+gems: [jekyll-feed,jekyll-paginate] # include feed plugin (supported by gh-pages)

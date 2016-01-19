@@ -19,7 +19,7 @@ categories:
 
 不需要重启App达到实时更新的方式是利用dispatch_source_t侦听文件变化，继而调用相应的设置UIView的方法。以下代码在其他场景下有使用价值。
 
-```objective-c
+{% highlight objective-c %}
 + (dispatch_source_t)watchForChangesToFilePath:(NSString *)filePath withCallback:(dispatch_block_t)callback
 {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -45,7 +45,7 @@ categories:
     return source;
 }
 
-```
+{% endhighlight %}
 另一块比较复杂的代码是解析类CSS文件,可以深入学习借鉴。
 
 ### [AsyncDisplayKit](https://github.com/facebook/AsyncDisplayKit)

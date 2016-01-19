@@ -30,7 +30,7 @@ GVUserDefaults的代码不多，核心功能用C语言和runtime相关的函数�
 GVUserDefaults的核心方法是generateAccessorMethods，在初始化时调用。通过遍历当前类的property列表，与事先实现的存取方法（见下）匹配，动态添加property的setter和getter方法。为了能够知道每个Selector对应存储的Key，通过一个叫mapping的字典以setter和getter的字符串作为Key，property的名称作为Value来进行索引。
 
 如下为一个整型的setter和getter的方法实现。同样类型的property指向相同的IMP，通过SEL名称找到相关的Key以实现存取。
-```swift
+{% highlight objective-c %}
 static void integerSetter(GVUserDefaults *self, SEL _cmd, int value) {
 NSString *key = [self defaultsKeyForSelector:_cmd];
 [self.userDefaults setInteger:value forKey:key];
@@ -40,7 +40,7 @@ static int integerGetter(GVUserDefaults *self, SEL _cmd) {
 NSString *key = [self defaultsKeyForSelector:_cmd];
 return (int)[self.userDefaults integerForKey:key];
 }
-```
+{% endhighlight %}
 
 ###小结
 GVUserDefaults的源码非常简短，却实现了一个令人眼前一亮的功能。自此我们便可以方便存取，再也不用多写琐碎的代码和记那些搞不灵清的KeyValue。这篇文章对源码进行了简短的剖析。当然读万卷书不如看源码，希望通过这篇文章的索引可以为对runtime陌生的同志提供帮助。

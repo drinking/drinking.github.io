@@ -9,6 +9,7 @@ categories: iOS
 从[25 iOS App Performance Tips & Tricks](http://www.raywenderlich.com/31166/25-ios-app-performance-tips-tricks)翻译了部分提高app性能的技巧
 
 ##中阶性能提升建议
+
 ###9)复用和延迟加载
 更多的视图意味着更多的绘制，这些最终意味着更多CPU和内存的开销。在通过UIScrollView展示很多视图时开销尤为明显。
 
@@ -28,7 +29,7 @@ categories: iOS
 具体可以缓存什么数据呢？比如服务器返回的数据，图片，甚至是计算后的值如UITableView的高度。
 NSURLConnection已经根据HTTP请求头将资源存储到本地或内存中，你甚至可以人为设置NSURLRequest，让它只访问缓存的数据。
 
-```objective-c
+{% highlight objective-c %}
 	+ (NSMutableURLRequest *)imageRequestWithURL:(NSURL *)url {
 	    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
 	 
@@ -39,7 +40,7 @@ NSURLConnection已经根据HTTP请求头将资源存储到本地或内存中，�
 	 
 	    return request;
 	}
-```
+{% endhighlight %}
 
 注意，你可以用NSURLConnection来进行URL请求，同样AFNetworking也可以。而且你不需要改变什么代码，因为它已经做得足够好。
 
@@ -61,6 +62,7 @@ NSURLConnection已经根据HTTP请求头将资源存储到本地或内存中，�
 
 
 ##高阶性能提升建议
+
 ###22)提升程序启动速度
 启动速度提升主要的核心在于避免阻塞主线程，异步处理繁重的任务，如网络请求、数据库操作或者解析数据。同时避免加载臃肿的XIB文件，XIB文件在主线程中加载，而storyboard不存在这个问题，有需要可以尽可能考虑storyboard。
 
@@ -71,7 +73,7 @@ NSAutoreleasePool是用于释放对象的程序块。通常情况下由UIKit来�
 
 比如当你需要创建大量的临时对象时，内存使用量会因此飙升直到未来某时刻统一被UIKit释放。这就意味这些临时对象存在的时间比需要的时间长。所以我们需要手动及时地释放这些对象。
 
-```objective-c
+{% highlight objective-c %}
     NSArray *urls = <# An array of file URLs #>;
         for (NSURL *url in urls) {
             @autoreleasepool {
@@ -81,7 +83,7 @@ NSAutoreleasePool是用于释放对象的程序块。通常情况下由UIKit来�
             /* 处理数据或其它创建操作 */
         }
     }
-```
+{% endhighlight %}
 
 ###24)选择性图片缓存
 有两种常见的方式来加载app bundle中的图片。`imageNamed`和`imageWithContentsOfFile`。前者会先从系统缓存中寻找图片对象，如果没有则创建新的对象并缓存，适用于频繁使用的图片。后者没有缓存机制，适合不常使用的资源消耗较大的图片。
@@ -89,8 +91,8 @@ NSAutoreleasePool是用于释放对象的程序块。通常情况下由UIKit来�
 ###25)避免使用Date Formatter
 在大量需要用到NSDateFormatter的情景下，可使用类似单例的形式初始化，重复使用一个NSDateFormatter对象。如果想要进一步提高速度，则可以采用[C语言的方式](http://sam.roon.io/how-to-drastically-improve-your-app-with-an-afternoon-and-instruments)。还有一种更好的方式就是使用Unix timestamps。一个标示时间的浮点数，纪录了自1970年1月一日到现在的时间间隔。通过NSDate很容易的实现时间转换。
 
-```objective-c
+{% highlight objective-c %}
     - (NSDate*)dateFromUnixTimestamp:(NSTimeInterval)timestamp {
         return [NSDate dateWithTimeIntervalSince1970:timestamp];
     }
-```
+{% endhighlight %}

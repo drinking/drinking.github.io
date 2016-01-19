@@ -10,7 +10,7 @@ categories:
 
 #### 算法保证在没有生成过数的区间进行随机生成操作，能够满足不重复需求。但是递归原因容易造成随机数的集中。
 
-```js
+{% highlight swift %}
 func createGenerator(count:Int)->(Int,Int)->[Int]{
     //http://stackoverflow.com/questions/24270693/nested-recursive-function-in-swift
     var generator:(Int,Int)->[Int] = {_,_ in return []} // give it a no-op definition
@@ -30,4 +30,4 @@ func createGenerator(count:Int)->(Int,Int)->[Int]{
 }
 
 createGenerator(10)(0,100)
-```
+{% endhighlight %}

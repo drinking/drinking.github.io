@@ -8,7 +8,7 @@ categories:
 [Chats](https://github.com/acani/Chats)是一个用Swift语言写的聊天app的一个Demo，初学者能够从中了解如何构建一个实时通信app的雏形。Demo功能本相对简单，没有实现数据储存和网络连接。我之前有用Objective-C写过聊天应用的经验，打算用Swfit重写一遍。希望通过阅读这部代码能比较不同人的实现方式，找到可以借鉴的实现。
 
 ####生成气泡
-```swift
+{% highlight swift %}
 
 let bubbleImage = bubbleImageMake()
 
@@ -39,10 +39,10 @@ func coloredImage(image: UIImage, red: CGFloat, green: CGFloat, blue: CGFloat, a
     UIGraphicsEndImageContext()
     return result
 }
-```
+{% endhighlight %}
 
 ####其它
-```swift
+{% highlight swift %}
 
 //用类名来作为复用Cell的标识
 tableView.registerClass(MessageSentDateCell.self, forCellReuseIdentifier: NSStringFromClass(MessageSentDateCell))
@@ -50,4 +50,4 @@ tableView.registerClass(MessageSentDateCell.self, forCellReuseIdentifier: NSStri
 //最简单的实现键盘消失的方法，有.Interactive和.OnDrag两种不同的形式。
 //如需点击时消失键盘，还需额外实现touch事件。
 tableView.keyboardDismissMode = .Interactive
-```
+{% endhighlight %}
