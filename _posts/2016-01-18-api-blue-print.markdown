@@ -38,13 +38,13 @@ zhan'shi
 #### 已完成
 - 将JSON描述文件转换成便于使用的Swift对象
 - 用Coolie将HttpResponse解析成Model
+- Request with Params
 
 #### 进行中
 - 基于Alamofire构建的基础Web请求服务
 
 #### 待完成
 - Chain Request
-- Request with Params
 - 增加代理层，处理特殊的转换请求
 
 

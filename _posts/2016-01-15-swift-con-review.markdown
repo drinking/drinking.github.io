@@ -7,7 +7,7 @@ categories: Swift
 
 ---
 
-中国第一届Swift大会已于2016年1月10日于北京结束。会上内容非常全面有价值，在[Github](https://github.com/atConf/atswift-2016-resources)有资料分享，会议视频在三个月后会放出。没有现场参与会议还是挺遗憾的。此篇文章作为阅读讲义后的初步总结，如有疏漏还望指正。
+中国第一届Swift大会已于2016年1月10日于北京结束。会上内容非常全面有价值，在[Github](https://github.com/atConf/atswift-2016-resources)有资料分享，会议视频在[慕课网](http://www.imooc.com/learn/600?from=http://each.dog)上可以看到。没有现场参与会议还是深表遗憾。此篇文章作为阅读讲义后的初步总结，如有疏漏还望指正。
 
 ### Think Functionally
 
