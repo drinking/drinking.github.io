@@ -7,7 +7,7 @@ categories:
 ---
 >Design Shanghai is Asia’s leading international design event, breaking new ground and setting a precedent in China’s ever-growing design community. Showcasing the best design brands from across the globe, Design Shanghai provides a unique and exciting platform to network and establish long-term business relations with Asia’s top architects, interior designers, property developers, retailers and private buyers.
 
-如上所诉”设计上海”意在为建筑师、室内设计师、房地产开发商、采购经理及私人买家建立长期业务关系，所以吾辈当初究竟是去凑个什么热闹？作为极简主义的接班人，必须认真贯彻落实党中央“够用就好的”重要思想，唯有认清其丑恶的嘴脸，才能坚决抵制资本主义的腐朽文化的侵蚀。
+如上所诉”设计上海”意在为建筑师、室内设计师、房地产开发商、采购经理及私人买家建立长期业务关系，所以吾辈当初究竟是去凑个什么热闹？作为极简主义的接班人，必须认真贯彻落实党中央“够用就好”的重要思想，唯有认清制资本主义万恶的嘴脸，才能坚决抵制其腐朽文化的侵蚀。
 
 ![img](http://drinking.github.io/assets/img/163-23/thumb_IMG_2525_1024.jpg)
 ![img](http://drinking.github.io/assets/img/163-23/thumb_IMG_2526_1024.jpg)
