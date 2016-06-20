@@ -1,0 +1,59 @@
+---
+layout: post
+title: SwiftCon总结
+date: 2016-04-24 14:31:20 
+comments: true
+categories:
+---
+
+个人原因遗憾错过了周六上午感兴趣的话题，听反响值得出视频后再看一遍。下面总结一下对部分课题的收获和想法。正如最后圆桌讨论所提倡的分享是为了完善自己的认知，所以不足之处还望不吝指正。
+
+###《拥抱Swift 3.0与未来展望》图拉鼎
+作者对Swift做了个人的回顾和展望。认识到了ABI这么一个概念，一个稳定的ABI能够做好向下兼容。至于是什么影响ABI的不稳定当时挺好奇，回头查了一下大概是因为Swift不断发展的需要经常对编译器使用的应用程序二进制接口 (ABI) 进行更改以便支持新的语言特性。
+
+关于语言特性的发展主要参考[swift-evolution](https://github.com/apple/swift-evolution)。与此同时，以IBM为首的一批开源项目正支持着Swift朝后端发展以及安卓端发展。有位嘉宾提到过，你需要考虑苹果为什么要推出Swift，为什么要兴师动众地替代Objective-C，为什么Swift是一个类型安全的语言，函数是一等公民，支持范型以及Struct的广泛应用（最后一个为什么是我说的）。恐怕其用心当初就不仅仅在于移动端的安全性。
+
+演讲者最后给了一些开源项目的地址，我这也贴出来：
+
+1. [http://perfect.org/](http://perfect.org/) Star最多的Swift后端项目，有批评者说它并不是纯粹的Swift项目，没有用到很多优质的特性 。有兴趣可以看下这个[Issue](https://github.com/PerfectlySoft/Perfect/issues/147)
+2. [https://github.com/IBM-Swift/Kitura](https://github.com/IBM-Swift/Kitura)
+3. [http://www.zewo.io/](http://www.zewo.io/)
+4. [https://github.com/necolt/swifton](https://github.com/necolt/swifton)
+5. 以及其它的项目[http://stackoverflow.com/questions/24235974/can-you-use-swift-as-a-web-programming-language](http://stackoverflow.com/questions/24235974/can-you-use-swift-as-a-web-programming-language)
+
+### 《从数学函数角度理解函数式编程》丁峰
+PPT准备不充分字体太小，临时调整，调换到下一场演讲。
+亮点一是对闭包、lambda和匿名函数的疏离，使我思录更清晰。lambda等价于匿名函数，都是闭包的一种形式。另外一种就是作为一等公民有名有姓的闭包了。闭包是一个封装了部分上下文的一个函数环境。
+
+另一个亮点是Y Combinator，用Swift实现获取不动点的方法。是时候重温一下刘未鹏的[文章](http://mindhacks.cn/2006/10/15/cantor-godel-turing-an-eternal-golden-diagonal/)了，写得非常好。
+
+### 《Redux in Swift——新一代的iOS应用架构》 方志刚
+Redux在iOS端很棒的尝试，内容新颖丰富。希望有机会再仔细体会下思想和调用流程。
+优点是调用明晰统一，将每次变动后的状态做备份就可以轻易复现任何时期的页面，达到时空穿梭的效果。
+缺点也相当明显，不能增量更新，每次需要刷新页面，效率低。调用链长，单线程，对性能要求高的场景不适合。只有一个Store耦合问题。
+优缺点都这么明显，是不是可以考虑分场景使用。
+
+### 《Asynchronous Programming in Swift，Swift异步编程》刘冠杉
+现场手撸，思路清晰。比较了基于RxSwift实现和纯手撸实现的差异，前者的简洁性有质的飞跃。
+听说刘冠杉在组织CocoaHeads Shanghai Meetup，感觉瞬间有了归属。
+
+### 《读 Swift 源码，理解 Monad》唐巧
+Monad的概念随着函数式语言的普及将被广泛认知。以前在使用以及阅读ReactiveCocoa代码时总是云里雾里，不知所以。在了解概念之后就会发现ReactiveCocoa、RxSwift乃至Promise框架的核心都是Monad，在此核心上拓展了异步链式调用、UIKit绑定支持等功能。所以概念的学习很重要，在一头扎进源码之前应当多想想，往往会事半功倍。
+
+所以唐巧的演讲对我来说更像一次巩固，此外探讨Map和FlatMap的区别是对我的一次解惑。FlatMap是为了避免多重封包而独立出来使用的map方法。
+
+在演讲前巧哥也介绍了一下自己大V的成长之路，在iOS文档贫瘠的时代可谓赶上了好时候，当前环境则不再那么容易“出人头地”。我认为在Swfit浪潮之中很大机会去有所作为的。
+
+### 《How to parse float numbers - the really hard way》傅若愚
+看题目时以为重点在float numbers，听讲过程中抓不住重点。虽说傅若愚在唐巧之后接着Monad的概念讲，但是此次的核心概念在解析。所以在没有明确解析是个什么过程之前，就将一堆重载的运算符和Monad组合铺天盖地地展现在没有基础和准备的听众面前确实有些吃力。不可否认是个很好的议题，怎能智商不够。同时也很让我敬佩ThoughtWorks的员工的专业精神。
+好在之后傅若愚讲[资源](https://github.com/lingoer/SwiftyCharms)开放出来，解析这个概念又开放了一片新大陆，有得学了。
+
+updated at 2016.6.20:运算符重载是个其实就是对`Map``FlatMap``Monadic compose`等操作最简单的替换，并不复杂。却可以使得操作组合像管道化一样直观。
+
+
+### 其它记忆点
+1. 闭包、lamda、匿名函数的关系。lamda和匿名函数等价。闭包相比后两者具有一等公民的命名和传递的性质，是一个包含特定环境的函数空间。
+2. Swift中子类覆盖父类的函数时支持协变和逆变，使得更具拓展性
+3. GC引用标记和ARC引用计数差异，GC避免循环引用内存泄漏但是在多线程操作时需要加锁以保证完整，故销量低。ARC则相反，适合多线程环境。
+4. 高阶函数是对函数环境的封装， Monads是数值的封装。这些属性使得两者都能相互独立存在，传递，在未来某时通过Map作用。高阶函数的实践意义之一也在此。
+5. Y Combinator 不动点和递归的思维方式，参考[mindhacks.cn/2006/10/15/cantor-godel-turing-an-eternal-golden-diagonal/](mindhacks.cn/2006/10/15/cantor-godel-turing-an-eternal-golden-diagonal/)
