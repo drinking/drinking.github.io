@@ -7,6 +7,7 @@ permalink: /tour/
 
 This will be a guideline to  lead a great journey to Tiet.
 I think we should do something special when we are young.
+For more photos about my traveling please follow me on Instagram [@duyado](https://www.instagram.com/duyado/).
 
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 <link rel="stylesheet" href="{{site.url}}/assets/routing/leaflet-routing-machine.css" />
