@@ -71,3 +71,4 @@ ac8326d Polish mockito usage
 * [THE COMMIT MESSAGE STANDARD](http://mikebell.io/the-commit-message-standard/)
 * [How to Write a Git Commit Message](http://chris.beams.io/posts/git-commit/)
 * [Commit Guidelines](https://gist.github.com/rmccue/daf72eaffe984f988a0a)
+* [Keeping Commit Histories Clean](https://www.reviewboard.org/docs/codebase/dev/git/clean-commits/)
