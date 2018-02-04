@@ -121,8 +121,6 @@ String tagLabel = Arrays.asList(label.split(" "))
 reduce(lambda x,y: x+y, map(lambda x:10**2, filter(lambda x: x%2==0,range(10))))
 ```
 之前有个段子，据说一个黑客偷到了美国用于导弹控制的LISP代码的最后一页，却发现这最后一页竟然是？一整页的括号）））））））））））））））。所以为了解决嵌套地狱以及一致性，我们引入了Optional。
-http://drinking.github.io/assets/img/163-23/thumb_IMG_2641_1024.jpg
-http://drinking.github.io/assets/img/trending.jpg
 ## Optional
 
 Optional<T>是一个容器对象，可以包含，也可以不包含一个值。Optional<T>中有方法来明确处理值不存在的情况，这样就可以避免异常值。如果你能一致地使用它的话。针对Optional的操作有一堆很重要的概念，Functor、Applicative以及Monad。有很多[文章](http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html)描述，这里就不累述了。
