@@ -33,18 +33,20 @@ comments: true
 既然无法改变当前VC方向，那能不能再创建一个仅支持横屏的VC。在视频横竖屏切换时，把竖屏的视频自然过渡到横屏去？答案当然是肯定的。这里我们用到了UIViewControllerAnimatedTransitioning自定义一个transition操作。所以在点击横屏时，其实是自定义的Present操作，视频播放器从前面一个移除，经过一系列变化后添加到横屏VC的过程。
 
 这个旋转过渡效果的核心是——“障眼法”。它的主要步骤如下图所示，退出横屏是一个逆操作的过程，思路一致。
-![iOS-video1](assets/img/iOS-video1.jpeg)
+![iOS-video1](/assets/img/2018/iOS-video1.jpeg)
 
 我们截取当前视频的一帧画面并覆盖到Player上面，即上图VideoImage。
 
 进行present操作，是一个预先配置好的横向VC。然而它的坐标系已经发生了变化。如果我们直接把截图 VideoImage按照它原来的位置放进去，会发生上图中间的情况，即图片已经发生了旋转。这不是我们想要的。我们想要在transtion的时候，有个旋转动画，让VideoImage可以自然旋转到全屏。而这个旋转操作是发生在landscape ViewController的里面。所以需要先将图二的VideoImage进行一个逆时针旋转操作。使得从portrait到lanscape过度时用户是无感知的。这里需要注意计算旋转后的位置与之前的完全切合。
 
-![iOS-video2](assets/img/iOS-video2.jpeg)
+![iOS-video2](/assets/img/2018/iOS-video2.jpeg)
+
 
 在进入横屏VC后，我们将进行另一段transform的动效。让VideoImage可以旋转放大到横屏的位置，如上图中间所示。在这个过程中，已经将真正的VideoPlayer默默添加到新的VC并隐藏在VideoImage下面。最后隐藏VideoImage即可。
 
 最终效果也就如下图所示:
-![video-transition](assets/img/video-transition.gif)
+![video-transition](/assets/img/2018/video-transition.gif)
+
 
 ### 其他
 1. 视频资源的比例和播放器视图的比例不一致，会出现黑边的情况。这个时候如果带着黑边的截图旋转，也会发生拉伸不一致的情况。所以发现这个问题之后，就针对视频资源的比例，只截取有效图像，旋转时候等比放大。能够基本保证放大后和player的位置一致。
