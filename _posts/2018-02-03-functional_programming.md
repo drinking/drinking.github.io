@@ -118,13 +118,15 @@ String tagLabel = Arrays.asList(label.split(" "))
 
 ## A Joke
 如果是普通的数据类型，并不能起到支持链式调用的能力，像下面这段代码，filter外面嵌套map，再外面嵌套reduce，可读性也不好。
-```
+
+````python
 reduce(lambda x,y: x+y, map(lambda x:10**2, filter(lambda x: x%2==0,range(10))))
-```
+````
+
 之前有个段子，据说一个黑客偷到了美国用于导弹控制的LISP代码的最后一页，却发现这最后一页竟然是？一整页的括号）））））））））））））））。所以为了解决嵌套地狱以及一致性，我们引入了Optional。
 ## Optional
 
-Optional<T>是一个容器对象，可以包含，也可以不包含一个值。Optional<T>中有方法来明确处理值不存在的情况，这样就可以避免异常值。如果你能一致地使用它的话。针对Optional的操作有一堆很重要的概念，Functor、Applicative以及Monad。有很多[文章](http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html)描述，这里就不累述了。
+Optional<T>（T为范型，任一类型）是一个容器对象，是对真正值的一层封装。表示一个Optional对象里面，可能存在这个值（T），也可能不存在（none）。并且Optional中有方法来明确处理值不存在的情况，如果你能一致地使用它的话,出现处理异常时可以统一用none来表示，就可以避免其他异常引起的副作用。。针对Optional的操作有一堆很重要的概念，Functor、Applicative以及Monad。有很多[文章](http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html)描述，这里就不累述了。
 
 ## Summary
 - 一等公民和高阶函数，增强代码灵活性。我们可以通过函数来创建函数，实现更好的复用。
