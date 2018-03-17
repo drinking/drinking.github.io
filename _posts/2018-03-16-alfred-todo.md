@@ -14,34 +14,45 @@ comments: true
 -[ ] 要做的事情
 -[x] 完成的事情
 ```
+所以为什么不能自己实现一个Alfred插件，来以文本的形式来操作呢？
 
-## 写入To-do List项
-所以为什么不能自己实现一个Alfred插件，来以文本的形式来操作呢？实现之前当然看看有没有现成的了。很不幸，要么支持不完善，要么只是第三方软件的支持。所以自己来撸一个咯。不过其中有一篇文章给了最基础的例子[Stupid Simple Alfred Todolist – Adam Gray – Medium](https://medium.com/@dashedstripes/stupid-simple-alfred-todolist-efa551732adb)，证明了这种思路的可行性。实现很简单，获取Alfred的参数，然后通过shell文件即可，一行搞定。
+实现之前当然看看有没有现成的了。很不幸，要么支持不完善，要么只是第三方软件的支持。所以自己来撸一个咯。不过有一篇文章给了最基础的例子[Stupid Simple Alfred Todolist – Adam Gray – Medium](https://medium.com/@dashedstripes/stupid-simple-alfred-todolist-efa551732adb)，证明了这种思路的可行性。实现很简，获取Alfred的参数，然后通过shell文件即可，一行搞定。
 
 ```shell
 echo -e — [] {query}\ >> ~/TODO.txt
 ```
+## 路径配置
+但是遇到一个问题，`~/TODO.txt`这个地址是写死的，我们需要让用户来配置自己存放文件的位置。
+这里用到了[sindresorhus/alfy: Create Alfred workflows with ease](https://github.com/sindresorhus/alfy)，一个用Node实现的Alfred脚手架。alfy帮你定义好了输入输出的结构，并且以`alfy.input`和`alfy.output`的形式获取和传递就是了，不需要关注底层，非常友好。同时结合alfy提供了设置cache方法，实现一个Alfred的`toedit`命令，只需要一行代码就可以完成，设置工作。
+
+```js
+alfy.cache.set('path',alfy.input);
+```
+![WX20180317-135727](/assets/img/2018/WX20180317-135727.png)
+
+
+## 写入
+
+写入就是用将输入的内容，用js的`fs`模块，写入到之前设置的路径，path获取方式与之前设置时的key对应。
+
+```js
+var filename = alfy.cache.get('path');
+fs.appendFileSync(filename, "- [] "+alfy.input+"\n")
+```
 
 ![WX20180316-140158](/assets/img/2018/WX20180316-140158.png)
 
-## 勾选项
-简单归简单，还是有一些缺陷。最主要的是没有check功能。我们完成一项任务要去勾掉它，这也是To-do List上最有成就感的一个过程。怎么能没有呢？所以第二步，要自己实现一下。check功能的实现思路也简单：
+## 勾选
+写入完成后，我们需要在一项任务要去勾掉它，这也是To-do List最有成就的一步。怎么能没有呢？功能的实现思路也简单：
 1. 读取To-do List文件。
 2. 根据参数匹配到对应的且未完成的行。
 3. 将未完成`- [ ]`标记替换为`- [x]`已完成标记。
 4. 将文件重新写入
 
-实现这些本身不是什么难事，只是在Alfred的开发环境下，需要依赖它定义的数据结构来进行参数的传递，需要一定的学习成本。好在又有合适的工具可以帮助简化这一步骤——[sindresorhus/alfy: Create Alfred workflows with ease](https://github.com/sindresorhus/alfy)，一个用Node实现的Alfred脚手架，我本来想用Swift实现，怎奈资源还是匮乏，时间不够还需站在巨人肩膀上。alfy帮你定义好了输入输入的结构，你只需要以`alfy.input`和`alfy.output`的形式在js获取和传递就是了，不需要关注底层，非常友好。所以顺着alfy的文档，和用了Node的fs文件操作模块。也是用了几行就实现了check的功能。另外还有`alfy.cache.set('path','/user/typed/path');`针对不同用户的路径设置，文件会存储到相应的位置。
+所以流程一致，获取路径，配合`fs`模块读写，剩下大部分就是js的逻辑代码，与平台无关了。
 
 ```js
-'use strict';
-const alfy = require('alfy');
-var fs = require('fs');
-
-var filename = alfy.cache.get('path');
-
 fs.readFile(filename, function(err, data) {
-	if(err) throw err;
 	var array = data.toString().split("\n");
 	const results = array.filter(word => (word.toString().indexOf(alfy.input) > -1 && word.toString().indexOf('x') === -1))
 						.map(x => ({title: x,arg:x}));
@@ -69,8 +80,10 @@ fs.readFile(filename, function(err, data) {
 目前已经把初版发布到了npm上面，可以一行命令来安装。装好了别忘了先用`toedit`指定一个用来存储To-do List的文件路径。
 
 ```js
-npm install --global alfred-todo
+npm install --global alfred-todo-list
 ```
+同时源码也放到Github上了，便于后续维护[drinking/alfred-todo: A to-do list workflow for Alfred](https://github.com/drinking/alfred-todo)。
+
 ## 其他可以改进之处
 - 增加时间选项，根据预设时间，触发提醒。
 - 当前只是简单粗暴地针对整个文件读取和写入，当数据量大时，还是有通过数据流方式读取和输出的余地。
