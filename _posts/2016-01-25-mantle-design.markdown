@@ -1,10 +1,17 @@
 ---
-layout: post
 title: Mantle源码阅读笔记
 date: 2016-01-25 16:58:58 +0800
+layout: post
+current: post
+cover:  assets/images/welcome.jpg
+navigation: True
+tags: [source code mantle]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
-categories:
 ---
+
 
 Mantle是一个为`Cocoa`和`Cocoa Touch`的Model层提供`JSON`和`Object`之间转换的框架，因其提供了较其它框架更为丰富的功能而被广泛应用。下面逐一谈下主要特性的实现原理及我的收获。
 

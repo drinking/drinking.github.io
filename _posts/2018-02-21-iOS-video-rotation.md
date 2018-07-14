@@ -1,5 +1,14 @@
 ---
 title: iOS视频旋转探究
+layout: post
+current: post
+cover:  assets/images/covers/3EA7AC7F-9340-48A4-8E70-B654042F90D7-6895-00000617CD7902A2_tmp.jpg
+navigation: True
+date: 2018-02-21 10:00:00
+tags: [Video Transition]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
 ---
 
@@ -7,7 +16,9 @@ comments: true
 屏幕旋转是视频类App横屏观看时是一种常见的操作。主流文章的实现是在竖屏界面通过设置UIDevice的方向来旋转当前的ViewController（下文简称VC）。
 
 ```objc
+
 [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIDeviceOrientationPortrait] forKey:@"orientation"];
+
 ```
 这种方法调用了私有方法，并强制改变了设备的方向。且不说私有方法的调用的实现是否合理，主动设置设备方向就容易出现横竖状态不一致的情况。其影响是整个设备包括自己App的所有ViewControllers。
 
@@ -36,6 +47,7 @@ comments: true
 既然无法改变当前VC方向，那能不能再创建一个仅支持横屏的VC。在视频横竖屏切换时，把竖屏的视频自然过渡到横屏去？答案当然是肯定的。这里我们用到了UIViewControllerAnimatedTransitioning自定义一个transition操作。所以在点击横屏时，其实是自定义的Present操作，视频播放器从前面一个移除，经过一系列变化后添加到横屏VC的过程。
 
 这个旋转过渡效果的核心是——“障眼法”。它的主要步骤如下图所示，退出横屏是一个逆操作的过程，思路一致。
+
 ![iOS-video1](/assets/img/2018/iOS-video1.jpeg)
 
 我们截取当前视频的一帧画面并覆盖到Player上面，即上图VideoImage。
@@ -52,7 +64,7 @@ comments: true
 
 
 ### 其他
-1. 视频资源的比例和播放器视图的比例不一致，会出现黑边的情况。这个时候如果带着黑边的截图旋转，也会发生拉伸不一致的情况。所以发现这个问题之后，就针对视频资源的比例，只截取有效图像，旋转时候等比放大。能够基本保证放大后和player的位置一致。
+视频资源的比例和播放器视图的比例不一致，会出现黑边的情况。这个时候如果带着黑边的截图旋转，也会发生拉伸不一致的情况。所以发现这个问题之后，就针对视频资源的比例，只截取有效图像，旋转时候等比放大。能够基本保证放大后和player的位置一致。
 
 ### 总结
 

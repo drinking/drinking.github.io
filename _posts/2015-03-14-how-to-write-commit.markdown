@@ -1,19 +1,26 @@
 ---
-layout: post
-title: "书写规范的Git提交说明"
+title: 书写规范的Git提交说明
 date: 2015-03-14 18:22:48 +0800
+layout: post
+current: post
+cover:  assets/images/welcome.jpg
+navigation: True
+tags: [Git]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
-categories: 
 ---
+
 
 一直以来我在使用Git进行提交时，书写信息都过于随意。这对于个人来说可能影响不大，但在团队合作中让别人不通过阅读代码就能理解你的意图，对提高工作效率是非常重要的。因此我希望在这方面可以做一些改进，翻阅了相关文章，进行了一些总结。
 
 
-###举个栗子
+### 举个栗子
 
 国外的一个项目，第一段是09年的提交。句首字母大小写随意，内容有的冗长不易阅读，有的过于简短难以理解。没有美感。
 
-{% highlight text %}
+```shell
 $ git log --oneline -5 --author cbeams --before "Fri Mar 26 2009"
 
 e5f4b49 Re-adding ConfigurationPostProcessorTests after its brief removal in r814. @Ignore-ing the testCglibClassesAreLoadedJustInTimeForEnhancement() method as it turns out this was one of the culprits in the recent build breakage. The classloader hacking causes subtle downstream effects, breaking unrelated tests. The test method is still useful, but should only be run on a manual basis to ensure CGLIB is not prematurely classloaded, and should not be run as part of the automated build.
@@ -22,13 +29,13 @@ e5f4b49 Re-adding ConfigurationPostProcessorTests after its brief removal in r81
 22b25e0 Consolidated Util and MutableAnnotationUtils classes into existing AsmUtils
 7f96f57 polishing
 
-{% endhighlight %}
+```
 
 
 
 到了14年提交就意简言概工整多了。看得出说明和代码一样一个持续完善的过程。
 
-{% highlight text %}
+```shell
 $ git log --oneline -5 --author pwebb --before "Sat Aug 30 2014"
 
 5ba3db6 Fix failing CompositePropertySourceTests
@@ -36,12 +43,11 @@ $ git log --oneline -5 --author pwebb --before "Sat Aug 30 2014"
 e142fd1 Add tests for ImportSelector meta-data
 887815f Update docbook dependency and generate epub
 ac8326d Polish mockito usage
-
-{% endhighlight %}
+```
 
 通过对比容易归纳出规范的特性。
 
-###提交说明的结构
+### 提交说明的结构
 当提交内容简单时，尽量用的一句话描述"做了什么"。句子结构可以分解为(方括号中为可选):
 
 `动作+组件+[原因-索引]`
@@ -65,7 +71,7 @@ ac8326d Polish mockito usage
 * 正文每行限制在72个字符
 * 正文中说明"问题是什么"，"问题为什么产生"，而不是怎么解决的。
 
-###参考文章
+### 参考文章
 这篇文章主要归纳自以下三篇文章，难免有疏漏。原文有很高的阅读价值。
 
 * [THE COMMIT MESSAGE STANDARD](http://mikebell.io/the-commit-message-standard/)

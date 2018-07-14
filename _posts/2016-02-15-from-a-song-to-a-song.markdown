@@ -1,9 +1,15 @@
 ---
-layout: post
 title: 从“一首歌”到一首歌的距离
 date: 2016-02-19 10:28:48 +0800
+layout: post
+current: post
+cover:  assets/images/covers/Enlight6.jpg
+navigation: True
+tags: [about songs]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
-categories:
 ---
 
 很久很久以前，有个小哥一直想当个民谣歌手。也许是受了李志、赵雷、许巍等人的影响。可是为什么不想成为摇滚歌手呢？因为要摇滚一个人搞不了呀，吉他之外贝斯、架子鼓都是必不可少的。想更丰富一点，再配个键盘手，再民族一点加个笛子和三弦，最后这就成了何勇的那首《钟鼓楼》了。

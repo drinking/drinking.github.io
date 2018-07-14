@@ -1,10 +1,17 @@
 ---
-layout: post
 title: 关于产品的一点思考
 date: 2015-05-09 21:54:22 +0800
+layout: post
+current: post
+cover:  assets/images/welcome.jpg
+navigation: True
+tags: [thoughts]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
-categories: 
 ---
+
 
 ### 任务系统
 Elevate是一款品质极高的学习App，从听说读写各个角度来提高个人的学习能力。Peak则是侧重从游戏中提高人的思维敏捷性。他们有几个典型的特点。

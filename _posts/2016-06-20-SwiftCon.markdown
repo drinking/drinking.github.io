@@ -1,14 +1,22 @@
 ---
-layout: post
 title: SwiftCon总结
 date: 2016-04-24 14:31:20 
+layout: post
+current: post
+cover:  assets/images/covers/IMG_3224.JPG
+navigation: True
+tags: [swift conference]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
-categories:
 ---
+
 
 个人原因遗憾错过了周六上午感兴趣的话题，听反响值得出视频后再看一遍。下面总结一下对部分课题的收获和想法。正如最后圆桌讨论所提倡的分享是为了完善自己的认知，所以不足之处还望不吝指正。
 
-###《拥抱Swift 3.0与未来展望》图拉鼎
+### 《拥抱Swift 3.0与未来展望》图拉鼎
+
 作者对Swift做了个人的回顾和展望。认识到了ABI这么一个概念，一个稳定的ABI能够做好向下兼容。至于是什么影响ABI的不稳定当时挺好奇，回头查了一下大概是因为Swift不断发展的需要经常对编译器使用的应用程序二进制接口 (ABI) 进行更改以便支持新的语言特性。
 
 关于语言特性的发展主要参考[swift-evolution](https://github.com/apple/swift-evolution)。与此同时，以IBM为首的一批开源项目正支持着Swift朝后端发展以及安卓端发展。有位嘉宾提到过，你需要考虑苹果为什么要推出Swift，为什么要兴师动众地替代Objective-C，为什么Swift是一个类型安全的语言，函数是一等公民，支持范型以及Struct的广泛应用（最后一个为什么是我说的）。恐怕其用心当初就不仅仅在于移动端的安全性。

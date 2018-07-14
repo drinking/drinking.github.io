@@ -1,10 +1,17 @@
 ---
-layout: post
 title: Functional Programming
+layout: post
+current: post
+cover:  assets/images/covers/AAE66AFD-7EEB-4E28-AB94-468A53344222.jpg
+navigation: True
 date: 2018-02-03 14:30:41 +0800
+tags: [Functional Programming]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
-categories: 
 ---
+
 注：这是一篇为分享准备的演讲稿，相比现场会有些精简。同时因为有不同技术栈的工程师，所以展示代码中既有Java又有Swift。演讲的后半部分是关于Monad的现场编程，没有在本文中展示出来。
 
 什么是函数式编程？根据接触的深浅不同，每个人心里都有各自的理解，有的人认为链式调用就是函数式编程，有的认为闭包或者柯里化是。所以到底是什么呢？这篇文章就来谈一谈我自己的浅薄理解。
@@ -111,7 +118,7 @@ String tagLabel = Arrays.asList(label.split(" "))
 通过对比两段操作可以较为清晰地发现，声明式和命令式的特征。
  
 ## Imperative vs declarative
-![declarative](http://www.vaikan.com/wordpress/wp-content/uploads/2013/06/Imperative-vs-Declarative-560x345.png)
+![declarative](/assets/img/2018/Imperative-vs-Declarative.jpeg)
 可以从上图的走势看出来，如果一段代码抽象的程度越高，则越是趋于声明式，也就是趋于描述做了什么。而代码抽象程度越低，也就趋于命令式，也就是强调怎么做。从纵向来看，what就是对how的一层封装。如果what是上班，how里面就包含起床，洗脸刷牙，做地铁等一系列流程。
 
 正如高级语言比机器语言更抽象，函数式语言比命令式语言更抽象。Map,Reduce,Filter都更加具有语言表现力，它们本身就能代表意图。而DSL相比高级语言就更加趋向于口语化的表达。正如Domain-specific language领域特定语言名称所预示着你不能用Markdown去查数据库，也不能用SQL去写网页，这些你都能用高级语言做，如果你真这么去做了，一定会崩溃的。

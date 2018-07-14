@@ -1,10 +1,18 @@
 ---
-layout: post
 title: 设计上海观展图集
 date: 2016-03-21 21:58:06 +0800
+layout: post
+current: post
+cover:  assets/images/covers/IMG_3151.JPG
+navigation: True
+tags: [design]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
-categories:
 ---
+
+
 >Design Shanghai is Asia’s leading international design event, breaking new ground and setting a precedent in China’s ever-growing design community. Showcasing the best design brands from across the globe, Design Shanghai provides a unique and exciting platform to network and establish long-term business relations with Asia’s top architects, interior designers, property developers, retailers and private buyers.
 
 如上所诉”设计上海”意在为建筑师、室内设计师、房地产开发商、采购经理及私人买家建立长期业务关系，所以吾辈当初究竟是去凑个什么热闹？作为极简主义的接班人，必须认真贯彻落实党中央“够用就好”的重要思想，唯有认清制资本主义万恶的嘴脸，才能坚决抵制其腐朽文化的侵蚀。

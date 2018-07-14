@@ -1,10 +1,17 @@
 ---
-layout: post
 title: 模块化的网页开发思考
 date: 2015-05-23 21:15:24 +0800
+layout: post
+current: post
+cover:  assets/images/welcome.jpg
+navigation: True
+tags: [modulization]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
-categories: 
 ---
+
 
 这篇文章用以陈述现有购物功能的弊端，同时展望下移动端网页模块化的实践前景。分析场景为商品详情页。文章的思想和我之前一篇《[评测框架简述](http://drinking.github.io/blog/2015/03/08/introduction-of-lcevaframewrok/)》类同，只不过把平台从iOS移到了Web前端。
 
@@ -39,6 +46,7 @@ categories:
 7. 使用门槛低，非技术人员也可以通过组合模块生成页面
 
 下图是在这个体系中各个角色所承担的职责。
+
 ![screenshot2]({{ site.url }}/assets/img/5-23/construct.png)
 
 #### What to do next？

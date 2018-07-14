@@ -1,22 +1,29 @@
 ---
-layout: post
 title: CATransition初探
 date: 2015-04-25 12:46:45 +0800
+layout: post
+current: post
+cover:  assets/images/welcome.jpg
+navigation: True
+tags: [CATransition]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
-categories: 
 ---
+
+
 本周的工作中有一个替换UINavigationBar标题字符串的小需求。为了使字符串的替换更自然，我找了利用CATransition实现动画自然过渡的方法，新字符串淡出旧字符串淡出。
 
 
-{% highlight objc %}
-
+```objc
 CATransition *animation = [CATransition animation];
 animation.duration = 0.5;
 animation.type = kCATransitionFade;
 animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
 [self.navigationController.navigationBar.layer addAnimation: animation forKey: @“changeTextTransition”];
 self.navigationController.navigationBar.topItem.title = title;
-{% endhighlight %}
+```
 
 在我对iOS动画的局限的认知中，动画是通过时间函数或帧变化逐渐改变View的属性值，如frame，color以实现动画效果。然后CATransition的变化过程中，有新旧两个值的残影，用之前的思路是显然是无法走通的。出于好奇，对CATransition的实现原理进行了了解，下图为其在CAAnimation中的继承位置，和我们常用的CABasicAnimation和CAKeyframeAnimation不是一个分支。因此可以料想到实现上的差异。
 ![screenshot]({{ site.url }}/assets/img/4-27/65cc0af7gw1dxlusbklpmj.jpg)

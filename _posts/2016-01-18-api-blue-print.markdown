@@ -1,9 +1,15 @@
 ---
-layout: post
 title: APIBlueprint To Swift Request
 date: 2016-01-18 18:39:48 +0800
+layout: post
+current: post
+cover:  assets/images/welcome.jpg
+navigation: True
+tags: [APIBluePrint Swift]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
-categories:
 ---
 
 这是一个个人项目，目标是将描述Web请求的文档自动转换成用Swift实现的网络请求。前面一部分功能已由APIBluePrint完成，我编写的模块复杂将Json格式的文档描述文件转换成Swift代码。
@@ -25,9 +31,6 @@ drakov —f blueprint.apib
 {% endhighlight %}
 
 
-### DKSwiftAPIBuilder
-zhan'shi
-
 #### Swift方面依赖的第三方库
 - Alamofire 用于作为网络请求的基础框架
 - SwiftyJSON 处理JSON时便利的工具
@@ -35,15 +38,16 @@ zhan'shi
 
 ### 进度
 
-#### 已完成
+
+**已完成**
 - 将JSON描述文件转换成便于使用的Swift对象
 - 用Coolie将HttpResponse解析成Model
 - Request with Params
 
-#### 进行中
+**进行中**
 - 基于Alamofire构建的基础Web请求服务
 
-#### 待完成
+**待完成**
 - Chain Request
 - 增加代理层，处理特殊的转换请求
 

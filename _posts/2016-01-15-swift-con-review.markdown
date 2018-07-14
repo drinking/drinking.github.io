@@ -1,10 +1,15 @@
 ---
-layout: post
 title: Swift大会填坑之旅
 date: 2016-01-15 13:03:14 +0800
+layout: post
+current: post
+cover:  assets/images/welcome.jpg
+navigation: True
+tags: [Swift]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
-categories: Swift
-
 ---
 
 中国第一届Swift大会已于2016年1月10日于北京结束。会上内容非常全面有价值，在[Github](https://github.com/atConf/atswift-2016-resources)有资料分享，会议视频在[慕课网](http://www.imooc.com/learn/600?from=http://each.dog)上可以看到。没有现场参与会议还是深表遗憾。此篇文章作为阅读讲义后的初步总结，如有疏漏还望指正。

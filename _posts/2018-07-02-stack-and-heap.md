@@ -1,7 +1,17 @@
 ---
+layout: post
+current: post
+cover:  assets/images/covers/IMG_4396.JPG
+navigation: True
 title: 既生堆何生栈
+date: 2018-07-02 10:00:00
+tags: [stack heap]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
 ---
+
 ### 前言
 这篇文章缘起于研究iOS字符串时查的一些资料，因为堆栈是一个通用的概念，所以单独拿出来作为一篇。
 
@@ -15,6 +25,7 @@ comments: true
 更多的情况下，当我们说堆栈时，说的是一种内存的分配方式。如下图所示，
 
 ![ ]( /assets/img/2018/9c2VH.png )
+
 > Stacks in computing architectures are regions of memory where data is added or removed in a last-in-first-out  manner.
 
 >   Heap  is a common name for the pool of memory from which dynamically allocated memory is allocated.
@@ -23,6 +34,7 @@ Wiki也解释的比较清楚。Stack的内存分配逻辑比较清楚，先进�
 
 ### 堆栈存在的理由
 堆栈从本质上讲是提供程序运行所需要的内存空间，但为什么会出现两种形式？因为程序不仅仅是由数据构成，还包括处理数据的逻辑方法。而这些方法的编码和执行顺序是非常符合后出先进的设计逻辑。因此栈的存在更多是为程序的方法服务，所以我们经常说的调用栈就是指可以查看程序调用顺序的内存空间，在栈顶部的就是最后执行的方法。方法中的临时变量如下图所示，也会存在栈中。理论上这些变量全部在堆(Heap)中生成也是可行的。
+
 ![ ]( /assets/img/2018/i6k0Z.png )
 
 但是在栈中存储有两个优势，一个是由于栈的特性，栈中的方法执行完后，会实时从栈顶移除。栈中的临时变量的声明周期也因此结束，内存释放效率非常高。另一方面，栈的大小通常是固定的，在我的MacBook上通过`ulimit -s`查看是8MB。相较8GB的内存，为何栈大小只有区区8MB。其中的一种说法是，栈的调用，也就是程序执行的速度，不仅仅依赖于CPU，也同样依赖内存的读取速度。所以栈的存储会依赖于大小有限的高速缓存，如果栈过大，则高速缓存会出现大量内存空间的交换，反而降低了执行的速度。而珍贵有限的栈空间，就应该尽量避免存储容量大或者声明周期长的数据。

@@ -1,16 +1,23 @@
 ---
-layout: post
 title: 薄荷App开发中用到的第三方库
 date: 2015-08-06 10:12:43 +0800
+layout: post
+current: post
+cover:  assets/images/welcome.jpg
+navigation: True
+tags: [third party depency]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
-categories: 
 ---
+
 
 这篇文章简述了我们在重构薄荷App时所采用的第三方库，这些库是一款功能完整的App必要的组成部分。
 在这里只是简单讲述各个库的应用场景或实现原理，有些比较复杂的框架还请读者自行了解其设计思想和使用方法，恕不累述。
 
 
-###界面开发的相关库
+### 界面开发的相关库
 
 #### [Classy](https://github.com/cloudkite/Classy)
 借鉴的CSS的方式，将UI相关的属性写在配置文件中，方便全局使用和修改。
@@ -19,7 +26,8 @@ categories:
 
 不需要重启App达到实时更新的方式是利用dispatch_source_t侦听文件变化，继而调用相应的设置UIView的方法。以下代码在其他场景下有使用价值。
 
-{% highlight objective-c %}
+```objc
+
 + (dispatch_source_t)watchForChangesToFilePath:(NSString *)filePath withCallback:(dispatch_block_t)callback
 {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -45,7 +53,8 @@ categories:
     return source;
 }
 
-{% endhighlight %}
+```
+
 另一块比较复杂的代码是解析类CSS文件,可以深入学习借鉴。
 
 ### [AsyncDisplayKit](https://github.com/facebook/AsyncDisplayKit)
@@ -64,7 +73,7 @@ FaceBook出品的动画效果引擎。
 自家封装ReactiveCocoa和iCarousel而成的轮播器组件。
 
 
-####其它常见的通用组件
+#### 其它常见的通用组件
 - CRToast
 - iCarousel
 - IDMPhotoBrowser
@@ -73,12 +82,12 @@ FaceBook出品的动画效果引擎。
 - JSBadgeView
 - MJRefresh
 
-###数据存储及文件操作
+### 数据存储及文件操作
 
 ### [Mantle](https://github.com/Mantle/Mantle)
 在Model,NSDictionary和Json之间进行智能地转换，省去手工转换代码的枯燥劳动。
 
-###[YTKKeyValueStore](https://github.com/yuantiku/YTKKeyValueStore)和[FMDB](https://github.com/ccgus/fmdb)
+### [YTKKeyValueStore](https://github.com/yuantiku/YTKKeyValueStore)和[FMDB](https://github.com/ccgus/fmdb)
 FMDB是对SQLite的一层封装，YTKKeyValueStore在FMDB基础上提供了KeyValue操作数据存储的方法。现今的移动客户端数据越来越倾向走网络，本地的数据采用KeyValue的形式满足绝大多数需求。
 
 ### [BHFileManager](https://github.com/drinking)
@@ -87,7 +96,7 @@ FMDB是对SQLite的一层封装，YTKKeyValueStore在FMDB基础上提供了KeyVa
 ### [GVUserDefaults](https://github.com/gangverk/GVUserDefaults)
 NSUserDefaults的拓展，以set和get的形式就可以使用持久化的对象，适合处理配置信息等一类信息量不大的数据，非常方便。
 
-###网络层
+### 网络层
 
 ### [BHAPI]()
 自家实现的网络层通信库，实现了一套json格式的API文档转ObjectiveC代码的机制，统一管理。底层基于MKNetworkKit，也方便换成AFNetWroking。
@@ -98,9 +107,9 @@ NSUserDefaults的拓展，以set和get的形式就可以使用持久化的对象
 ### [SDWebImage](https://github.com/rs/SDWebImage)
 路人皆知的图片异步加载的库。此外，我们还应用这个库的图片存储接口，进行其他图片的缓存。
 
-###其它工具库
+### 其它工具库
 
-###[ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)
+### [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)
 信号量的合并及串联，将异步代码从繁复的嵌套中脱离出来，以优雅的高内聚的方式执行。大大增加代码的可阅读性和可维护性。MVVM的设计思想，简化了传统MVC中Controller层的代码量，将一部分代码抽离到ViewModel层，和View层进行单向或双向的数据绑定。精简了业务代码，增加了复用性。RAC已经成为我们项目中，最不可或缺的库，当发现能采用如此优雅的代码解决问题时，你再也不想回到过去了。
 
 

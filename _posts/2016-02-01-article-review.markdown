@@ -1,10 +1,17 @@
 ---
-layout: post
 title: 观展记I
 date: 2016-02-01 22:34:36 +0800
+layout: post
+current: post
+cover:  assets/images/covers/IMG_2813.JPG
+navigation: True
+tags: [design]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
-categories:
 ---
+
 上周末在上海当代艺术博物馆观看一口气观赏了三个不同主题的展览，分别为坂本一成和大同大张的个展和意在尝试新的展览机制汇集了很多作品的的青策计划。对于一个外行人来说，设计上面的认知非常有限，斗胆在局限的认知中评述一下个人的看法。希望能藉书写文字逐渐拓宽在各领域的认知。
 
 ### 反高潮的诗学 坂本一成的建筑

@@ -1,7 +1,17 @@
 ---
 title: 一款Alfred上的To-do List插件
+layout: post
+current: post
+cover:  assets/images/covers/IMG_4445.JPG
+navigation: True
+date: 2018-03-16 10:00:00
+tags: [alfred to-do list]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
 ---
+
 
 ## 简介
 [Alfred](https://www.alfredapp.com/)被誉为MacOS上的效率神器，关于它的介绍太多了，就不累述。

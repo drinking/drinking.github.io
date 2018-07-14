@@ -1,9 +1,15 @@
 ---
-layout: post
 title: 一句话描述iOS中的设计模式
-date: 2016-02-15 12:54:40 +0800
+date: 2016-02-16 12:54:40 +0800
+layout: post
+current: post
+cover:  assets/images/covers/DSC_7935.JPG
+navigation: True
+tags: [design pattern]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
-categories:
 ---
 
 本文是对[《iOS Design Patterns》](http://www.raywenderlich.com/46988/ios-design-patterns)中涉及到的设计模式的简要概括。
@@ -44,7 +50,7 @@ categories:
 ### Command模式
 `Target-Action`模式，将对一个对象的某个操作行为进行封装，传递给其他对象或者队列，使得该行为适当时刻被传递的对象或者队列触发。
 
-##参考文献
+## 参考文献
 
 - [Memento设计模式](http://www.dofactory.com/net/memento-design-pattern)
 - [Cocoa Design Patterns](https://developer.apple.com/legacy/library/documentation/Cocoa/Conceptual/CocoaFundamentals/CocoaDesignPatterns/CocoaDesignPatterns.html#//apple_ref/doc/uid/TP40002974-CH6-SW5)

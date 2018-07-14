@@ -1,10 +1,17 @@
 ---
-layout: post
 title: Say bye to 2016!
+layout: post
+current: post
+cover:  assets/images/covers/IMG_3489.JPG
+navigation: True
 date: 2017-01-23 21:28:30 +0800
+tags: [2016 year review]
+class: post-template
+subclass: 'post tag-getting-started'
+author: Drinking
 comments: true
-categories:
 ---
+
 其实我并没有总结的习惯，当然这并不是个好习惯。然而一到年底就会不自觉得回顾这一年的时光，然后就想起老卢“穷困潦倒”之时时常挂在嘴边的名言“前半生浑浑噩噩，后半生不知如何”，日子过得滋润后，他便较少说起。
 
 尽管2016年之于我是丰富而神奇的，平凡和庸碌还是生活的大部分。

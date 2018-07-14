@@ -1,48 +1,93 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-title: Thought Hub
-author: "Drinking"
-subheading: "无知和弱小不是生存的障碍,傲慢才是"
-email: pan49@126.com
-description: iOS Developer working in ShangHai,China
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://drinking.github.io" # the base hostname & protocol for your site
-github_username:  drinking
-# twitter_username: Crazy_Drinking
-
-# # Build settings
+# Jekyll configuration
 markdown: kramdown
-highlighter: rouge
-# github: https://github.com/drinking
+# highlighter: rouge
+paginate: 100 # it will paginate after this number
+language: 'en-uk'
 
-comments:
-    disqus: "olaplanet"
-#    isso: "comments.mysite.org"
+# edit baseurl to simply '/' if using as your personal page (instead of a project page)
+baseurl: /
 
-style:
-#    body: "whitesmoke"
-    padding: 33%
-    anchor: "#46f"
-    serif-heading: true
-    nav: "#181818"
-#    headline: "#06f"
-    description: "white"
-    article:
-        odd: "#ffffff"
-        even: "#222222"
+# Website info
+title: Thought Hub
+description: "无知和弱小不是生存的障碍,傲慢才是"
+cover: assets/images/blog-cover.jpg
+logo: assets/images/blog-icon.png
+logo_dark: assets/images/favicon.png
+favicon: assets/images/favicon.png
+production_url: https://drinking.github.io
+source_url: https://github.com/drinking
 
-links:
-  - github: "https://github.com/drinking"
-  - instagram: "https://www.instagram.com/duyado/"
-  - stack-overflow: "http://stackoverflow.com/users/1846773/drinking"
+# Social info
+navigation: True # show the navbar links
+subscribers: False # you need to connect an external service for this to work,
+# if 'True' the submit button is disabled for now, but you can change that
+# by editing `_includes/subscribe-form.html`
+twitter: Drinking # replace by your username
+# facebook: ghost # replace by your username
 
-paginate: 10
-excerpt_separator: "\n\n\n" # excerpt ends after two blank lines
-defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: true}}]
-plugins: [jekyll-feed,jekyll-paginate] # include feed plugin (supported by gh-pages)
+# Disqus
+disqus: False
+disqus_shortname: jekyller # replace with your disqus username
+
+# Google Analytics
+# google_analytics: UA-69281367-1 # replace with your GA tracking identifier
+
+# Permalinks
+permalink: /:title
+# permalink: /author/:author
+# permalink: /tag/:tag
+
+# Authors' info in `_data/authors.yml`
+# Tags' info in `_data/tags_info.yml`
+
+# gems and other configs
+plugins: [jekyll-paginate, jekyll-feed]
+
+feed:
+  path: feed.xml
+
+# Additional settings available on the front-matter
+# Site logo in the index.html (as in demo.ghost.io)
+# Author's page cover in _layouts/author.html
+# The same for page.html and tag.html layouts
+# Post's page cover as a per-post basis _posts/...
+# Disqus comments as a per-post basis
+# ...
+
+# Settings for builing master branch with travis-ci
+# with jekyll-travis
+
+# Settings for deploy rake task
+# Username and repo of Github repo, e.g.
+# https://github.com/USERNAME/REPO.git
+# username defaults to ENV['GIT_NAME'] used by Travis
+# repo defaults to USERNAME.github.io
+# Branch defaults to "source" for USERNAME.github.io
+# or "master" otherwise
+safe: False
+lsi: False
+username: jekyller
+repo: jasper2
+branch: master
+relative_source: ../jasper2/
+destination: ../jasper2-pages/
+production_url:  https://drinking.github.io/
+source_url:  https://github.com/jekyller/jasper2/
+
+exclude:
+  - assets/css
+  - node_modules
+  - vendor
+  - .travis.yml
+  - Gemfile
+  - Gemfile.lock
+  - GHOST.txt
+  - gulpfile.js
+  - LICENSE
+  - package.json
+  - Rakefile
+  - README.md
+  - script.py
+  - changelog.md
+  - "*.Rmd"
+  - .git*
