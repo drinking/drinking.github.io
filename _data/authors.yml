@@ -1,8 +1,8 @@
 ghost:
   username: ghost
   name: Ghost
-  url_full: http://drinking.github.io
-  url: drinking.github.io
+  url_full: http://drinking.github.io/
+  url: drinking.github.io/
   bio: The professional publishing platform
   picture: assets/images/ghost.png
   facebook: ghost
