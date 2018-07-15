@@ -8,5 +8,5 @@ class: page-template
 subclass: 'post page'
 ---
 
-Hi I'm Drinking, an iOS Developer working in Shanghai.
+Hi I'm Drinking, a software engineer working in Shanghai.
 ![profile]({{ site.url }}/assets/img/profile.png)

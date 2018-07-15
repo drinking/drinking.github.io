@@ -3,7 +3,7 @@ title: APIBlueprint To Swift Request
 date: 2016-01-18 18:39:48 +0800
 layout: post
 current: post
-cover:  assets/images/welcome.jpg
+cover:  assets/images/covers/IMG_4396.JPG
 navigation: True
 tags: [APIBluePrint Swift]
 class: post-template
@@ -20,15 +20,15 @@ comments: true
 #### Drafter
 将API Blueprint的文档解析成JSON或YAML文件。AST的格式已经启用，以[Refract Parse Result](https://github.com/refractproject/refract-spec/blob/master/namespaces/parse-result-namespace.md)为主。
 
-{% highlight text %}
+```shell
 drafter -t refract -f json blueprint.apib
-{% endhighlight %}
+```
 
 #### Drakov
 Drakov是一个Mock Server，解析API描述文档为测试提供伪数据服务。
-{% highlight text %}
+```shell
 drakov —f blueprint.apib
-{% endhighlight %}
+```
 
 
 #### Swift方面依赖的第三方库

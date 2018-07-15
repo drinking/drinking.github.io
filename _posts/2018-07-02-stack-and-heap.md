@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover:  assets/images/covers/IMG_4396.JPG
+cover:  assets/images/covers/IMG_3205.JPG
 navigation: True
 title: 既生堆何生栈
 date: 2018-07-02 10:00:00
