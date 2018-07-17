@@ -2,3 +2,6 @@ _site
 .sass-cache
 .jekyll-metadata
 guide.md
+_posts/.Archive/
+_posts/.markeditor/
+_posts/configs/
