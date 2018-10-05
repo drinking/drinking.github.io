@@ -22,3 +22,6 @@ APIKit算是这个工具的第三代了。以前尝试把所有的功能写在�
 ![ ]( /assets/img/2018/apikit_structure.png )
 
 上图就是这个拼装玩具的流程图。之前浏览其它网站的时候，看到有哥们拿Sketch绘制流程图，效果甚好。这次也尝试使用了一下，确实方便许多。以后就更有动力写文章了哈。
+
+### 参考资料
+- [Code Beautifier in Xcode](http://blog.manbolo.com/2015/05/14/code-beautifier-in-xcode)
