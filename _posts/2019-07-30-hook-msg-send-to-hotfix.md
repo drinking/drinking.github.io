@@ -12,7 +12,9 @@ author: Drinking
 comments: true
 ---
 
-一切从戴铭老师的[《App 启动速度怎么做优化与监控？》](https://time.geekbang.org/column/article/85331?utm_term=zeusD4FM2&utm_source=web&utm_medium=infoq&utm_campaign=presell-161&utm_content=arti0318)一文说起。里面谈到了一种通过fishhook来hook objc_msgSend来实现App性能监控的方案。objc_msgSend为了性能考虑是用汇编直接实现的方法，所以在Hook时需要与汇编打上交道。而汇编的资料非常的不全面，所以在学习过程中东拼西凑地理解，效率不是很高。花了一段时间阅读[GCDFetchFeed](https://github.com/ming1016/GCDFetchFeed)源码，其替换被戴铭总结为以下几步，每一步对于不了解汇编的人来说，内涵远并不是字面上那么直观。所以补充了一下我自己的理解，存在的错误还望指正。
+一切从戴铭老师的[《App 启动速度怎么做优化与监控？》](https://time.geekbang.org/column/article/85331?utm_term=zeusD4FM2&utm_source=web&utm_medium=infoq&utm_campaign=presell-161&utm_content=arti0318)一文说起。里面谈到了一种通过fishhook来hook objc_msgSend来实现App性能监控的方案。
+
+objc_msgSend为了性能考虑是用汇编直接实现的方法，所以在Hook时需要与汇编打上交道。而汇编的资料非常的不全面，所以在学习过程中东拼西凑地理解，效率不是很高。花了一段时间阅读[GCDFetchFeed](https://github.com/ming1016/GCDFetchFeed)源码，其替换被戴铭总结为以下几步，每一步对于不了解汇编的人来说，内涵远并不是字面上那么直观。所以补充了一下我自己的理解，存在的错误还望指正。
 1. 入栈参数，参数寄存器是 x0~ x7。对于 objc_msgSend 方法来说，x0 第一个参数是传入对象，x1 第二个参数是选择器 _cmd。syscall 的 number 会放到 x8 里。
 2. 交换寄存器中保存的参数，将用于返回的寄存器 lr 中的数据移到 x1 里。
 3. 使用 bl label 语法调用 pushCallRecord 函数。
