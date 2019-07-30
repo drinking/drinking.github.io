@@ -5,3 +5,4 @@ guide.md
 _posts/.Archive/
 _posts/.markeditor/
 _posts/configs/
+.markeditor/*

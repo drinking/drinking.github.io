@@ -52,6 +52,7 @@
         "_posts/2019-03-7-appreciation-of-sdwebimage.md": 4001, 
         "_posts/2018-07-02-stack-and-heap.md": 4005, 
         "_posts/2015-05-02-weakify-and-strongify.markdown": 4025, 
+        "_posts/2019-07-30-hook-msg-send-to-hotfix.md": 4040, 
         "_posts/2015-08-06-review-of-thirdparties.markdown": 4022
     }, 
     "_posts": [
@@ -93,7 +94,8 @@
         "2015-01-14-read-tttattributedlabel.markdown", 
         "2015-01-09-read-svpulltorefresh.markdown", 
         "2015-01-08-weixin-questions.markdown", 
-        "2015-01-07-ios-performance-tips.markdown"
+        "2015-01-07-ios-performance-tips.markdown", 
+        "2019-07-30-hook-msg-send-to-hotfix.md"
     ], 
     "__raw_positions": {
         "_posts/2016-01-18-api-blue-print.markdown": 20, 
@@ -140,6 +142,7 @@
         "_includes": 1, 
         "_posts/2018-07-02-stack-and-heap.md": 5, 
         "_posts/2015-05-02-weakify-and-strongify.markdown": 25, 
+        "_posts/2019-07-30-hook-msg-send-to-hotfix.md": 40, 
         "_posts/2018-03-08-ljrouter.md": 9
     }
 }
