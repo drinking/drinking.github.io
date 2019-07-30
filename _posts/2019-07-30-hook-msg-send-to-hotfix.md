@@ -3,7 +3,7 @@ title: Hook objc_msgSend to hotfix
 date: 2019-07-30 20:00:48 +0800
 layout: post
 current: post
-cover:  assets/images/covers/IMG_3297.JPG
+cover:  assets/images/covers/IMG2019-07030.jpeg
 navigation: True
 tags: [objc_msgSend disassembly]
 class: post-template
