@@ -46,11 +46,11 @@ uintptr_t before_objc_msgSend(id self, SEL _cmd, uintptr_t lr) {
 ### 参考资料
 有些参考资料是后期整理时发现的，比如吴凯凯的博客里面做了比我更详细的讲解和实践。叹没有早日看到，就可以少走一点弯路。
 - [ARM64 Function Calling Conventions](https://developer.apple.com/library/archive/documentation/Xcode/Conceptual/iPhoneOSABIReference/Articles/ARM64FunctionCallingConventions.html)
-- [iOS ABI | 吴凯凯的博客](https://wukaikai.tech/2019/06/19/iOS-ABI/)上篇的中文参考
+- [iOS ABI  吴凯凯的博客](https://wukaikai.tech/2019/06/19/iOS-ABI/)上篇的中文参考
 - [Procedure Call Standard for the ARM 64-bit Architecture](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0055b/IHI0055B_aapcs64.pdf)
-- [arm64程序调用规则 | 吴凯凯的博客](https://wukaikai.tech/2019/05/19/arm64%E7%A8%8B%E5%BA%8F%E8%B0%83%E7%94%A8%E8%A7%84%E5%88%99/#%E7%BB%93%E8%AF%AD)上篇的中文参考
+- [arm64程序调用规则 吴凯凯的博客](https://wukaikai.tech/2019/05/19/arm64%E7%A8%8B%E5%BA%8F%E8%B0%83%E7%94%A8%E8%A7%84%E5%88%99/#%E7%BB%93%E8%AF%AD)上篇的中文参考
 - [c++ - Variable argument function: Bad access with va_arg at iOS arm64 - Stack Overflow](https://stackoverflow.com/questions/35536515/variable-argument-function-bad-access-with-va-arg-at-ios-arm64)
-- [Exploring AArch64 assembler – Chapter 7 | Think In Geek](https://thinkingeek.com/2017/03/19/exploring-aarch64-assembler-chapter-7/)
+- [Exploring AArch64 assembler – Chapter 7](https://thinkingeek.com/2017/03/19/exploring-aarch64-assembler-chapter-7/)
 - 最后才发现的汇编学习网站 [Programmed Introduction to MIPS Assembly Language](https://chortle.ccsu.edu/AssemblyTutorial/)
 - ARM指令查询，获知汇编指令的含义，对寄存器的影响等。[ARM Information Center](http://infocenter.arm.com/help/index.jsp)
 - [Introduction to X86-64 Assembly for Compiler Writers](https://www3.nd.edu/~dthain/courses/cse40243/fall2015/intel-intro.html)
