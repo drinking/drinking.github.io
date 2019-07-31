@@ -22,7 +22,7 @@ objc_msgSend为了性能考虑是用汇编直接实现的方法，所以在Hook�
 5. 使用 bl label 语法调用 popCallRecord 函数。
 
 补充-猜测-疑问
-1. 在缺乏寄存器的硬件设备上，参数通常是存在stack中，如i386，至于到amd64由于寄存器数量增多，就有一定数目的参数保留在x0-x7，x8保留参数数量的意思，我猜测是用于去stack找寻后续的参数。
+1. 在缺乏寄存器的硬件设备上，参数通常是存在stack中，如i386，至于到amd64由于寄存器数量增多，就有一定数目的参数保留在x0-x7，x8保留参数数量的意思，我猜测是用于去stack找寻后续的参数。[amd64 and va_arg - Made of Bugs](https://blog.nelhage.com/2010/10/amd64-and-va_arg/)一文中有对可变参数的进一步讲解。
 2. 保存lr是至关重要的一步，它决定了hook的方法执行完毕后，能够返回当初调用objc_msgSend的位置，让调用的方法自然执行下去，并感觉不到任何差异。让一切仿佛没有变化的另一个很重要的步骤就是保存原始objc_msgSend调用前和调用后的寄存器环境。在代码里多次save()和load()就是基于此。`__asm volatile ("mov x2, lr\n");`这一步操作就是把lr的值作为第三个参数，传给`pushCallRecord`方法。
 3. blr是bl（跳转到指定label时）同时设置了lr寄存器，所以第二部的lr寄存器里的值需要额外保存，以免被其他跳转操作覆盖。代码中将lr保存在堆上的某个地址中。`__asm volatile ("mov x12, %0\n" :: "r"(&before_objc_msgSend)); `之前需要保存x8,x9寄存器，因为其可能导致x8，x9寄存器的改变。
 4. 执行原始的objc_msgSend前通过load还原环境。这一步反而是最好理解的。
@@ -54,4 +54,3 @@ uintptr_t before_objc_msgSend(id self, SEL _cmd, uintptr_t lr) {
 - 最后才发现的汇编学习网站 [Programmed Introduction to MIPS Assembly Language](https://chortle.ccsu.edu/AssemblyTutorial/)
 - ARM指令查询，获知汇编指令的含义，对寄存器的影响等。[ARM Information Center](http://infocenter.arm.com/help/index.jsp)
 - [Introduction to X86-64 Assembly for Compiler Writers](https://www3.nd.edu/~dthain/courses/cse40243/fall2015/intel-intro.html)
-- [amd64 and va_arg - Made of Bugs](https://blog.nelhage.com/2010/10/amd64-and-va_arg/)
