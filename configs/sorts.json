@@ -54,7 +54,8 @@
         "_posts/2018-07-02-stack-and-heap.md": 4006, 
         "_posts/2015-05-02-weakify-and-strongify.markdown": 4026, 
         "_posts/2019-07-30-hook-msg-send-to-hotfix.md": 4041, 
-        "_posts/2015-08-06-review-of-thirdparties.markdown": 4023
+        "_posts/2015-08-06-review-of-thirdparties.markdown": 4023, 
+        "_posts/2019-08-21-energy-efficiency.md": 4042
     }, 
     "_posts": [
         "2019-08-08-game-review.md", 
@@ -97,7 +98,8 @@
         "2015-01-09-read-svpulltorefresh.markdown", 
         "2015-01-08-weixin-questions.markdown", 
         "2015-01-07-ios-performance-tips.markdown", 
-        "2019-07-30-hook-msg-send-to-hotfix.md"
+        "2019-07-30-hook-msg-send-to-hotfix.md", 
+        "2019-08-21-energy-efficiency.md"
     ], 
     "__raw_positions": {
         "_posts/2016-01-18-api-blue-print.markdown": 21, 
@@ -146,6 +148,7 @@
         "_posts/2018-07-02-stack-and-heap.md": 6, 
         "_posts/2015-05-02-weakify-and-strongify.markdown": 26, 
         "_posts/2019-07-30-hook-msg-send-to-hotfix.md": 41, 
-        "_posts/2018-03-08-ljrouter.md": 10
+        "_posts/2018-03-08-ljrouter.md": 10, 
+        "_posts/2019-08-21-energy-efficiency.md": 42
     }
 }
