@@ -3,7 +3,7 @@ title: 黑苹果系统升级 Hackintosh upgrade to Big Sur from Catalina
 date: 2021-04-09 12:00:48 +0800
 layout: post
 current: post
-cover:  assets/images/covers/41566386531.jpg
+cover:  assets/images/covers/WechatIMG11.jpeg
 navigation: True
 tags: [clover hackintosh Big Sur Catalina ]
 class: post-template
