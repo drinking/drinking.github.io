@@ -12,15 +12,15 @@ author: Drinking
 comments: true
 ---
 
-此次升级把一年前通过Clover安装的黑苹果Catalina系统升级到Big Sur. 期间也花费了不少时间,试了不少错,好歹最后也成功直接升级成功,没有白费力气.这里就简单记录一下升级过程和经验给需要的人留作参考.
+此次升级把一年前通过Clover安装的黑苹果Catalina系统升级到Big Sur. 期间也花费了不少时间,试了不少错,好歹最后也成功直接升级,没有白费力气.这里就简单记录一下升级过程和经验给需要的人留作参考.
 
 ### 升级Clover
-升级Colver主要参考文章 [How to Update Clover for BigSur Compatibility using OpenRuntime and Quirks](https://www.insanelymac.com/forum/topic/345789-guide-how-to-update-clover-for-bigsur-compatibility-using-openruntime-and-quirks-v5123/) ** 注意逐字逐句阅读 **
+升级Colver主要参考文章 [How to Update Clover for BigSur Compatibility using OpenRuntime and Quirks](https://www.insanelymac.com/forum/topic/345789-guide-how-to-update-clover-for-bigsur-compatibility-using-openruntime-and-quirks-v5123/) **注意逐字逐句阅读**
 主要流程简单概述为
 1. 备份当前在用的的EFI文件夹,放到另外的存储设备上
 2. 将最新的Clover安装到独立的U盘,升级Clover Configurator
 3. 按照文章指引删除无用的EFI和kext文件
-4. 从[OpenCore](https://dortania.github.io/OpenCore-Install-Guide/config.plist/#selecting-your-platform)中勾选对应硬件.**注意Clover的Quirks区域中也包含该文章三块配置,文章的图片用颜色区分,以及部分名称映射也有图片标识,反复细读!**
+4. 从[OpenCore](https://dortania.github.io/OpenCore-Install-Guide/config.plist/#selecting-your-platform)中勾选对应硬件.**注意Clover的Quirks区域包含OpenCore三块配置,[How to...](https://www.insanelymac.com/forum/topic/345789-guide-how-to-update-clover-for-bigsur-compatibility-using-openruntime-and-quirks-v5123/)一张图片用三种颜色区分,另一张包含Colver和OpenCore的映射,需要仔细匹配和勾选**
 5. 插入U盘,设置BIOS从U盘启动,尝试配置是否能正常进入系统.
 
 #### 踩坑
@@ -37,4 +37,4 @@ comments: true
 参考文章[Update Directly to macOS Big Sur](https://www.tonymacx86.com/threads/update-directly-to-macos-big-sur.304629/). 
 期间重启时找不到安装入口,需要设置Colver配置,将Gui中Hide Volumn中的preboot删除,这样就可以显示出MacOS install xxx via xxx 的启动项, 一直走这个入口升级,直到完全升级完成, 到最后进入新的BigSur系统.
 
-以上是对这次升级的一次记录,忘能帮助有需要的朋友.
+以上是对这次升级的一次记录,希望帮助有需要的朋友节约一些时间.
