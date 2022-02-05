@@ -6,3 +6,4 @@ _posts/.Archive/
 _posts/.markeditor/
 _posts/configs/
 .markeditor/*
+.DS_Store
