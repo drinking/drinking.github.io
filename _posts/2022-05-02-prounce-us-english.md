@@ -29,13 +29,14 @@ comments: true
 **Consonant Sounds** - *b ch s t f g sh w etc.*
 
 **Voiced Sound** voicing- vocal chords are vibrating, producing a sound. Like AH, OH, OO, A, EE. All vowel are voiced and some consonant are voiced others not.
+
 **Unvoiced Sound** consonant pair unvoiced and voiced like /p//b/, /t//d/ , /f//v/,/s//z/
 
 ## 辅音
 
 #### R&W&Q
 
-**R**发音口型和舌头位置
+R发音口型和舌头位置
 
 1) Mouth and lips come tightly forward.
 2) Tongue Moves Back
@@ -128,7 +129,9 @@ J发voiced /dʒ/音, **educate** 和**suggestion**是常见发音错误的单词
 
 H在某些语系中不发音，在中文语系中没有这个问题。
 
-最后老师强调不用一下子把所有东西记住，专注于当前说的话，然后不断意识到错误然后纠正，最后完成自然而然的提高。原文: The more you speak English, the more you will become aware of when you have pronounce something incorrectly. It is this awareness of your mistakes that will eventually help you to change and improve the way you are speaking automatically.
+最后老师强调不用一下子把所有东西记住，专注于当前说的话，然后不断意识到错误然后纠正，最后完成自然而然的提高。原文: 
+
+The more you speak English, the more you will become aware of when you have pronounce something incorrectly. It is this awareness of your mistakes that will eventually help you to change and improve the way you are speaking automatically.
 
 ## 元音
 
@@ -142,43 +145,29 @@ Vowel sounds are made by slightly changing the size, shape and the tension of th
 
 high to low: *EE i AE EH A* words: *heat hit hate het hat*
 
-#### EE/i:/ & i/I/  
+**EE/i:/ & i/I/** 主要在于区分不用元音的音高，需要区分易错的/I/和/i:/音的单词。如Bean发EE音，Been发i音。
 
-主要在于区分不用元音的音高，需要区分易错的/I/和/i:/音的单词。如Bean发EE音，Been发i音。
+**AE/eɪ/** Start with 'A' and then you glide up to an 'E', date, fake, lazy, paper
 
-#### AE/eɪ/
+**EH/e/** egg, get, better
 
-Start with 'A' and then you glide up to an 'E', date, fake, lazy, paper
-
-#### EH/e/
-
-egg, get, better
-
-#### A /æ/
-
-Hat, apple, taxi, back, dad, value.
+**A /æ/** Hat, apple, taxi, back, dad, value.
 
 ### Back vowels
 
 **high to low**: *OO Uh Oh Aw AH* **words**: *boot book boat bought bot*
 
-#### OO/u:/ & Uh/ʊ/
+**OO/u:/ & Uh/ʊ/**
 
 OO发OO/u:/音, food, school
 
 OO发Uh/ʊ/音, foot, took, cook, shook, stood, good, look, book, wool, swoosh.
 
-#### O /əʊ/
+**O /əʊ/** O音常见的发音错误woke和walk，won't和want
 
-O音常见的发音错误woke和walk，won't和want
+**AU/aʊ/** 国人嘴形打开不够，就非常容易发错。如downtown. now, house, round, loud, rebound, 其他也有类似发音不准的情况。Our拆解成AU-Wer，发两个音节。
 
-#### AU/aʊ/
-
-国人嘴形打开不够，就非常容易发错。如downtown. now, house, round, loud, rebound, 其他也有类似发音不准的情况。Our拆解成AU-Wer，发两个音节。
-
-#### AH/ɑ/
-
-O发音hot, top, mop, sock, blob, solve, follow, not, stop, probably.
+**AH/ɑ/** O发音hot, top, mop, sock, blob, solve, follow, not, stop, probably.
 
 ### 缩减短语 Phrase Reductions
 
