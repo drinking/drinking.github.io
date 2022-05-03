@@ -3,7 +3,7 @@ title: 跟Paul大叔学美语
 date: 2022-05-02 12:00:00 +0800
 layout: post
 current: post
-cover:  assets/images/covers/1281644039441_.pic.jpg
+cover:  assets/images/covers/1681651550417_.pic.jpg
 navigation: True
 tags: [US English learning]
 class: post-template
