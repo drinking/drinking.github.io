@@ -196,6 +196,6 @@ high to low: *EE i AE EH A* words: *heat hit hate het hat*
 
 - **How to pronounce** 在Google搜索引擎中输入：how to pronounce school 会显示出发音卡片，包括嘴形演示，英美发音，慢速等好用的功能。
 
-- [Youglish](https://youglish.com/)是一款搜索发音的网站，可以根据单词搜索出Youbute上的视频，便于读者学习该单词的市场使用场景和语音。
+- [Youglish](https://youglish.com/)是一款搜索发音的网站，可以根据单词搜索出Youbute上的视频，便于读者学习该单词的使用场景和语音。
 - [qwerty](https://qwerty.kaiyi.cool/)一款边打字边学习英语的工具网站。
 - [ludwig](https://ludwig.guru/)帮你找到单词出现的例句。
