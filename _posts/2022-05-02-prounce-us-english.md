@@ -137,9 +137,7 @@ The more you speak English, the more you will become aware of when you have pron
 
 Vowel sounds are made by slightly changing the size, shape and the tension of the muscles in your mouth, your tongue and your lips. A small change can produce an entirely different sound.
 
-元音由细微的嘴形，大小张力，所以老师建议通过听力来练习元音，并跟着自己重新发听到的元音。
-
-且区分前部发音和后部发音，按音高又分了5个元音。
+元音由细微的口型，大小张力，所以老师建议通过听力来练习元音，并跟着自己重新发听到的元音。且区分前后部的发音，每部分按口型划分出5个元音。视频中元音没有面面俱到，需要针对有需要的另外巩固。
 
 ### Front vowels
 
@@ -157,15 +155,15 @@ high to low: *EE i AE EH A* words: *heat hit hate het hat*
 
 **high to low**: *OO Uh Oh Aw AH* **words**: *boot book boat bought bot*
 
-**OO/u:/ & Uh/ʊ/**
+**OO/u:/ & Uh/ʊ/** OO发OO/u:/音, food, school, moon,knew, OO发Uh/ʊ/音, foot, took, cook, shook, stood, good, look, book, wool, swoosh.
 
-OO发OO/u:/音, food, school
+**Oh/oʊ/** 双元音，发音比O长
 
-OO发Uh/ʊ/音, foot, took, cook, shook, stood, good, look, book, wool, swoosh.
-
-**O /əʊ/** O音常见的发音错误woke和walk，won't和want
+**O /o/** O音常见的发音错误woke和walk，won't和want
 
 **AU/aʊ/** 国人嘴形打开不够，就非常容易发错。如downtown. now, house, round, loud, rebound, 其他也有类似发音不准的情况。Our拆解成AU-Wer，发两个音节。
+
+**AW /ɔ/** 视频中没有篇幅, bought
 
 **AH/ɑ/** O发音hot, top, mop, sock, blob, solve, follow, not, stop, probably.
 
