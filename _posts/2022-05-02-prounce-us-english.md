@@ -133,6 +133,10 @@ H在某些语系中不发音，在中文语系中没有这个问题。
 
 The more you speak English, the more you will become aware of when you have pronounce something incorrectly. It is this awareness of your mistakes that will eventually help you to change and improve the way you are speaking automatically.
 
+关于辅音的口型，可以参考下图。
+
+![口型](/assets/img/2022/WechatIMG175.jpeg)
+
 ## 元音
 
 Vowel sounds are made by slightly changing the size, shape and the tension of the muscles in your mouth, your tongue and your lips. A small change can produce an entirely different sound.
