@@ -3,7 +3,7 @@ title: Some quotes about coding
 date: 2022-05-14 12:00:00 +0800
 layout: post
 current: post
-cover:  assets/images/covers/2201654407127_.pic.jpg
+cover:  assets/images/covers/WX20220605-134000@2x.png
 navigation: True
 tags: [Code quote]
 class: post-template
