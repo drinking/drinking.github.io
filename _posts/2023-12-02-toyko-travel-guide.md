@@ -13,7 +13,7 @@ comments: true
 
 ---
 
-It's a busy and enriching trip in Toyko, all are fresh experiences for me as a foreigner. I'd like to share with you the itinerary to help you arrange your travel.
+It's a busy and enriching trip in Toyko, all are fresh experiences for me as a foreigner. I'd like to share the itinerary with you for reference.
 
 ### Basic
 - Transportation: Use the JR Tokyo Wide Pass as the main ticket for three days in the suburbs, and a 48-hour subway ticket for local transportation.
