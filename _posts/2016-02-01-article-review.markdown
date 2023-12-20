@@ -1,5 +1,5 @@
 ---
-title: 观展记I
+title: 观展记
 date: 2016-02-01 22:34:36 +0800
 layout: post
 current: post
